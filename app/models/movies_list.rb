@@ -1,2 +1,0 @@
-class MoviesList < ApplicationRecord
-end
