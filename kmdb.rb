@@ -120,8 +120,14 @@ dark_knight_rises.save
 # Prints a header for the movies output
 puts "Movies"
 puts "======"
+
+
 for movie in Movie.all
-    puts "#{movie["title"]} #{movie["year_released"]} #{movie["rated"]} #{warner_bros["name"]}"
+     studio_name = Studio.where({ "id" => movie["studio_id"] })
+        for studio in studio_name
+           studio = studio["name"]
+        end
+    puts "#{movie["title"]} #{movie["year_released"]} #{movie["rated"]} #{studio}"
 end
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
