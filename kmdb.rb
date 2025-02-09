@@ -121,7 +121,7 @@ dark_knight_rises.save
 puts "Movies"
 puts "======"
 for movie in Movie.all
-    puts "#{movie["title"]} #{movie["year_released"]} #{movie["rated"]} #{movie["studio_id"]}"
+    puts "#{movie["title"]} #{movie["year_released"]} #{movie["rated"]} #{warner_bros["name"]}"
 end
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
