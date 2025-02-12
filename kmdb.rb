@@ -274,3 +274,11 @@ end
 puts ""
 puts "Top Cast"
 puts "========"
+
+for movie in Movie.all
+   roles = Role.where({ "movie_id" => movie["id"] }) 
+   for role in roles
+     actor = Actor.find_by({ "id" => role["actor_id"] })
+     puts "#{movie["title"]} #{actor["name"]} #{role["character_name"]}"
+   end
+ end
